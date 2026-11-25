@@ -17,6 +17,7 @@ trim($_POST['titulo'] ?? ''),
 if ($id) {
     $q = $pdo->prepare('UPDATE tarefas SET titulo=?,descricao=?,responsavel=?,categoria=?,prazo=?,prioridade=?,status=? WHERE id=?');
     $q->execute([$d[0], $d[1], $d[2], $d[3], $d[4], $d[5], $d[6], $id]);
+    
     header('Location: index.php');
     exit;
 }
