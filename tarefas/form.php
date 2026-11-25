@@ -25,7 +25,11 @@ require '../includes/header.php'; ?>
 </div><?php if (isset($_GET['erro'])): ?>
     <p class="alert">Erro ao gravar. Verifique os dados.</p><?php endif; ?>
 <section class="panel">
+
+
     <form method="post" action="salvar.php" class="grid"><input type="hidden" name="id" value="<?= $id ?>">
+
+    
         <div class="field full"><label>Título *</label><input name="titulo" required
                 value="<?= htmlspecialchars($t['titulo']) ?>"></div>
 
@@ -53,7 +57,7 @@ require '../includes/header.php'; ?>
             </select></div>
 
 
-        <div class="field full"><button class="btn">Gravar tarefa</button></div>
+        <div class="field full"><button type="submit" class="btn">Gravar tarefa</button></div>
 
 
     </form>
